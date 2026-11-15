@@ -1,0 +1,7 @@
+check,pass
+"no duplicate (_STATE, SEQNO) pairs",True
+train and val disjoint,True
+train and test disjoint,True
+val and test disjoint,True
+splits together cover every kept row,True
+sizes ~70/10/20 and equal positive rate,True

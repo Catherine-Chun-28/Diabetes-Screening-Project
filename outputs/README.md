@@ -1,0 +1,59 @@
+# outputs/: what each file is
+
+Every file here is written by `01_Data_Preprocessing.ipynb` (step 2–3 files) or `02_Model_Training.ipynb` (everything else). Each figure (`.png`) has a `.csv` with the numbers behind it (the step 6 calibration figure uses `step6_calibration_bins_validation.csv`, and the permutation-importance figure uses `step10_permutation_importance_M2_validation.csv`).
+
+**Labels:**
+- **Main:** in the body of the report.
+- **Appendix:** appendix candidate; the appendix list is still being finalised.
+- **Record:** supports a number or check cited in the text.
+- **Superseded:** an earlier figure replaced by a main figure. It was kept because it was made at the time of the test evaluation.
+
+"Test" files come from the single test evaluation, or from its saved predictions with no refitting. "Validation" files never use test rows.
+
+## Main report items
+| File | Report item |
+|---|---|
+| `table1_test_metrics_M0_M2.csv` | **Table 1.** Recall, precision and F1 at 0.15 and 0.50, plus ROC-AUC; M0–M2, both model types, test |
+| `table2_test_metrics_M2_vs_M3_module.csv` | **Table 2.** The same for M2-module vs M3 (SDOH-module test respondents) |
+| `fig_main1_confusion_matrices_logistic_test.png` | **Figure 1.** Confusion matrices, M0–M2 logistic regression, test; 0.15 (top) and 0.50 (bottom) |
+| `fig_main2_subgroup_recall_precision_M2_logistic_test.png` | **Figure 2.** Subgroup recall and precision, M2 logistic regression, 0.15, test |
+| `fig_main3_confusion_M2_vs_M3_logistic_015_test.png` | **Figure 3.** Confusion matrices, M2-module vs M3 logistic regression, 0.15, test |
+
+## Appendix candidates
+| File | What it shows |
+|---|---|
+| `step10_threshold_table_M2_logistic_test.csv` | M2 logistic regression at cutoffs 0.10, 0.15, 0.20, 0.30, 0.50 (test; saved predictions). The look is recorded in `step10_threshold_table_record.csv` |
+| `fig_appx_subgroup_recall_precision_M2_logistic_test_both_cutoffs.png` | Figure 2 at both cutoffs |
+| `fig_step7_pr_curves_test.png` | Precision-recall curves, M0–M2, test |
+| `fig_step6_calibration_validation.png` | Calibration (predicted vs actual rate), validation |
+| `fig_step10_permutation_importance_M2_validation.png` | Permutation importance for M2, validation |
+| `step7_test_within_age_band_P4_appendix.csv` | Subgroup metrics by income and by race/ethnicity within age bands (18–49, 50–64, 65+), M2 models, cutoff 0.50 (check P4) |
+| `fig_step8_confusion_matrices_M2_vs_M3_test.png` | M2-module vs M3, both model types, both cutoffs (8 panels) |
+| `fig_step8_M3_minus_M2_test.png` | Change from adding SDOH items, overall and by subgroup |
+| `step7_test_by_group.csv`, `step7b_test_by_group_cutoff015.csv`, `step8_test_by_group_*.csv` | Full subgroup tables (including FPR) |
+| `step5_chosen_settings_final.csv`, `step8_chosen_settings_module_final.csv` | Final tuned settings |
+
+## Records behind numbers in the text
+| File | What it is |
+|---|---|
+| `step2_rebuild_counts.csv` | Row counts after cleaning, checked against the expected values |
+| `step3_split_sizes.csv` | Train / validation / test sizes and diabetes rates |
+| `step3_leakage_checks_1_2.csv`, `step3_leakage_checks_3_6.csv`, `step3_leakage_check4_medians_means.csv`, `step3_leakage_check5_shuffles.csv`, `step7_leakage_recheck_3_6.csv` | The six leakage checks (all passed), and their rerun before the test evaluation |
+| `step3_all_rows_feature_stats.csv` | Missingness and summaries per feature |
+| `step7_test_results.csv`, `step7b_test_results_cutoff015.csv`, `step7b_test_results_050_vs_015.csv` | Test metrics, M0–M2, at 0.50 and 0.15 |
+| `step8_test_results_module.csv`, `step8_test_M3_minus_M2_overall.csv`, `step8_test_proposal_rule_check.csv` | SDOH comparison on test, and the proposal's "does SDOH help" rule applied |
+| `step7_test_evaluation_record.csv`, `step7b_cutoff015_record.csv`, `step8_test_evaluation_record.csv` | Timestamps of the official test evaluations |
+| `step10_permutation_importance_M2_validation.csv` | Numbers behind the importance figure |
+
+## Development (validation) and tuning files
+Not reported as results; kept for traceability.
+- `step4_validation_results.csv`, `step4_validation_by_group.csv`, `step4_validation_score_distribution.csv`, `step6_validation_results_final_settings.csv`, `step6_calibration_*`, `step8_validation_results_module*.csv`, `step8_calibration_bins_validation_module.csv`
+- Tuning: `step5_tuning_cv_results.csv`, `step5b_tuning_extension_M2_rf.csv`, `step5_chosen_settings.csv`, `step8_tuning_cv_results_module.csv`, `step8b_tuning_extension_module_rf.csv`, `step8_chosen_settings_module.csv`
+
+## Superseded figures (replaced by main figures)
+| File | Replaced by |
+|---|---|
+| `fig_step7_confusion_matrices_test.png` (0.50) and `fig_step7b_confusion_matrices_test_cutoff015.png` (0.15) | Figure 1 |
+| `fig_step7_subgroup_recall_fpr_test.png` and `fig_step7b_subgroup_recall_fpr_test_cutoff015.png` (recall and FPR) | Figure 2 (recall and precision, decision FIG1) |
+
+`outputs/scores/` (predicted scores cache) is not in the repository; notebook 02 rebuilds it.

@@ -1,0 +1,5 @@
+model,kind,param,default,default_mean_ROC_AUC,best_value,best_mean_ROC_AUC,gain_over_default,best_SE,gain_exceeds_1SE,chosen,chosen_at_grid_edge,best_by_PR_AUC_(recorded_only),grid_extended
+M2,logreg,C,1,0.8118562963914941,0.1,0.8119195016373245,6.320524583036669e-05,0.0006216223747763,False,1.0,False,1.0,False
+M3,logreg,C,1,0.8124539827089583,0.1,0.812493963354826,3.998064586774319e-05,0.0006083057319437,False,1.0,False,1.0,False
+M2,rf,min_samples_leaf,50,0.8092103339722989,10.0,0.8115499978852206,0.00233966391292173,0.000992459569385,True,10.0,False,20.0,True
+M3,rf,min_samples_leaf,50,0.808811455525877,10.0,0.8115881780838823,0.002776722558005318,0.0011086458144239,True,10.0,False,10.0,True

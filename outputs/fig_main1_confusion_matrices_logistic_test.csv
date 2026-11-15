@@ -1,0 +1,7 @@
+model,cutoff,TN_cleared,FP_false_alarms,FN_missed,TP_caught
+M0 logistic regression,0.15,33745,40084,2153,10811
+M1 logistic regression,0.15,40370,33459,2681,10283
+M2 logistic regression,0.15,51557,22272,2729,10235
+M0 logistic regression,0.5,73829,0,12964,0
+M1 logistic regression,0.5,73780,49,12917,47
+M2 logistic regression,0.5,72204,1625,11056,1908

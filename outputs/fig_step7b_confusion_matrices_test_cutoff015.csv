@@ -1,0 +1,6 @@
+model,TN_cleared,FP_false_alarms,FN_missed,TP_caught
+M0 logistic regression,33745,40084,2153,10811
+M1 logistic regression,40370,33459,2681,10283
+M2 logistic regression,51557,22272,2729,10235
+M1 random forest,40792,33037,2616,10348
+M2 random forest,49811,24018,2360,10604

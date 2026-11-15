@@ -1,0 +1,11 @@
+check,pass,detail
+3. M0 feature list has no target/split/has_sdoh/grp_* columns,True,
+3. M1 feature list has no target/split/has_sdoh/grp_* columns,True,
+3. M2 feature list has no target/split/has_sdoh/grp_* columns,True,
+3. M3 feature list has no target/split/has_sdoh/grp_* columns,True,
+4a. fitted medians equal training-row medians,True,
+4b. fitted scaler means equal training-row means,True,
+4c. fitted scaler means differ from all-row means,True,9 of 9 differ
+5. M2 logistic regression on shuffled labels: MEAN validation ROC-AUC over 10 shuffles within 0.02 of 0.5,True,"mean = 0.5163, min = 0.3909, max = 0.6297"
+6a. the test file is read only in the single step 7 cell,True,"02_Model_Training.ipynb cell 25: test_df = pd.read_csv(os.path.join(DERIVED, ""TEST_SET_DO_NOT_OPEN_until_final_evaluation.csv""))"
+6b. no model is fit at or after the step 7 cell,True,"final cell(s): [('02_Model_Training.ipynb', 25)]"

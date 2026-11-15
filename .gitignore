@@ -1,0 +1,12 @@
+# Large or rebuilt files (the unzipped raw data and the cached scores are recreated by the notebooks)
+*.XPT
+*.xpt
+*.XPT 
+data/derived/brfss2024_clean.csv
+data/derived/brfss2024_slim.csv
+outputs/scores/
+
+# Jupyter / OS clutter
+.ipynb_checkpoints/
+.DS_Store
+__pycache__/

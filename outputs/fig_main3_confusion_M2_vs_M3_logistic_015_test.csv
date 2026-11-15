@@ -1,0 +1,3 @@
+model,cutoff,TN_cleared,FP_false_alarms,FN_missed,TP_caught
+M2-module (no SDOH items),0.15,22262,10174,1198,4722
+M3 (M2 + 7 SDOH items),0.15,22299,10137,1183,4737

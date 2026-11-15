@@ -1,0 +1,5 @@
+kind,cutoff,overall recall up,overall PR-AUC up,subgroups with both up,subgroups,largest |recall change| in a subgroup,largest |PR-AUC change| in a subgroup
+logreg,0.5,True,True,9,19,0.01626016260162602,0.015627363426949314
+logreg,0.15,True,True,8,19,0.016260162601625994,0.015627363426949314
+rf,0.5,False,True,1,19,0.028708133971291863,0.011583460914530441
+rf,0.15,True,True,13,19,0.04878048780487804,0.011583460914530441
